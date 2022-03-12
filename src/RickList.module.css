@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=League+Spartan:wght@300;400;500&family=Roboto:ital,wght@0,400;1,500;1,700&family=Syne+Mono&display=swap');
+.loading {
+  animation: rotate 5s infinite linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.RickCard{
+    display: inline-flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: #F05454;
+    width: 350px;
+    border-radius: 7%;
+}
+.imageStyle{
+    width: 300px;
+    padding: 3px;
+    align-self: center;
+}
+.nameStyle{
+    color:#30475E;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 10px;
+}
+.status{
+    text-align: center;
+    margin: 5px 10px;
+    font-size: large;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.CardContainer{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}

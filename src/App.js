@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import "./globals.css";
+import { ApolloProvider } from "@apollo/client";
+import { client } from "./ApolloClient/client";
+import RickWrapper from "./RickList";
+import { useParams } from "react-router";
 function App() {
+  let { pagenum } = useParams();
+  if (pagenum === undefined || pagenum < 0) pagenum = 1;
+  console.log(pagenum);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+      <div className="App">
+        <h1 className="header">The Rick List</h1>
+        <RickWrapper pageNum={pagenum} />
+        <div className="footer">
+          <div className="navigate">
+            <a title="previous page" href={`/${parseInt(pagenum) - 1}`}>
+              &nbsp;&#60;&nbsp;
+            </a>
+            &nbsp;&nbsp;A database of Ricks across universes.&nbsp;&nbsp;
+            <a title="next page" href={`/${parseInt(pagenum) + 1}`}>
+              &nbsp;&#62;&nbsp;
+            </a>
+          </div>
+          <a />
+          {/* <div className="footerTag">A database of Ricks across universes.</div> */}
+        </div>
+      </div>
+    </ApolloProvider>
   );
 }
 
