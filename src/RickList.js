@@ -2,7 +2,7 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import styles from "./RickList.module.css";
 import loadingPNG from "./assets/loading.png";
-
+import fourNotfourPNG from "./assets/404.gif";
 function GetRicks(props) {
   const allRicks = gql`
   query {
@@ -29,7 +29,12 @@ function GetRicks(props) {
   }
 
   if (error) {
-    return <div>Uh...Oh!</div>;
+    return (
+      <div className={styles.fourNotfour}>
+        <div>Portal Gun Broke?</div>
+        <img src={fourNotfourPNG} alt="Error"></img>
+      </div>
+    );
   }
   console.log(data);
   return data.characters.results.map(({ image, name, status }) => (

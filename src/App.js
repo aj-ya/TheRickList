@@ -11,16 +11,18 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <h1 className="header">The Rick List</h1>
+        <a href="/">
+          <h1 className="header">The Rick List</h1>
+        </a>
         <RickWrapper pageNum={pagenum} />
         <div className="footer">
           <div className="navigate">
             <a title="previous page" href={`/${parseInt(pagenum) - 1}`}>
-              &nbsp;&#60;&nbsp;
+              &nbsp;&#60;&#60;&nbsp;
             </a>
             &nbsp;&nbsp;A database of Ricks across universes.&nbsp;&nbsp;
             <a title="next page" href={`/${parseInt(pagenum) + 1}`}>
-              &nbsp;&#62;&nbsp;
+              &nbsp;&#62;&#62;&nbsp;
             </a>
           </div>
           <a />

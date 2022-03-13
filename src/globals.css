@@ -65,9 +65,11 @@ body {
     display: inline;
     text-align: center;
 }
+a{
+    text-decoration: none;
+}
 .navigate > a{
     display: inline;
-    text-decoration: none;
     color: #ff0000;
     background-color: antiquewhite;
     border-radius: 50%;
