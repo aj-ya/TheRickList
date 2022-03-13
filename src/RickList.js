@@ -40,7 +40,7 @@ function GetRicks(props) {
   return data.characters.results.map(({ image, name, status }) => (
     <div key={name} className={styles.RickCard}>
       <div className={styles.nameStyle}>{name}</div>
-      <img className={styles.imageStyle} src={image} alt={name + "img"} />
+      <img className={styles.imageStyle} src={image} alt={name + " img"} />
       <div className={status + " " + styles.status}>{status}</div>
     </div>
   ));

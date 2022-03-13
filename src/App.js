@@ -1,33 +1,49 @@
 import "./App.css";
 import "./globals.css";
 import { ApolloProvider } from "@apollo/client";
+import React from "react";
 import { client } from "./ApolloClient/client";
+//import "antd/dist/antd.css";
 import RickWrapper from "./RickList";
-import { useParams } from "react-router";
+import { Button } from "antd";
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 function App() {
-  let { pagenum } = useParams();
-  if (pagenum === undefined || pagenum < 0) pagenum = 1;
-  console.log(pagenum);
+  let [pageNum, setPageNum] = React.useState(1);
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+  // let { pagenum } = useParams();
+  // console.log(pagenum);
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <a href="/">
-          <h1 className="header">The Rick List</h1>
-        </a>
-        <RickWrapper pageNum={pagenum} />
+        <h1 className="header">The Rick List</h1>
+        <RickWrapper pageNum={pageNum} />
         <div className="footer">
-          <div className="navigate">
-            <a title="previous page" href={`/${parseInt(pagenum) - 1}`}>
-              &nbsp;&#60;&#60;&nbsp;
-            </a>
-            &nbsp;&nbsp;A database of Ricks across universes.&nbsp;&nbsp;
-            <a title="next page" href={`/${parseInt(pagenum) + 1}`}>
-              &nbsp;&#62;&#62;&nbsp;
-            </a>
-          </div>
-          <a />
-          {/* <div className="footerTag">A database of Ricks across universes.</div> */}
+          <Button
+            shape="circle"
+            size="large"
+            icon={<LeftOutlined />}
+            onClick={() => {
+              if (pageNum !== 1) setPageNum(pageNum - 1);
+              scrollToTop();
+            }}
+          />
+          &nbsp;&nbsp;A database of Ricks across universes.&nbsp;&nbsp;
+          <Button
+            shape="circle"
+            size="large"
+            icon={<RightOutlined />}
+            onClick={() => {
+              if (pageNum !== 6) setPageNum(pageNum + 1);
+              scrollToTop();
+            }}
+          />
         </div>
+        {/* <div className="footerTag">A database of Ricks across universes.</div> */}
       </div>
     </ApolloProvider>
   );
