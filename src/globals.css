@@ -11,7 +11,9 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: #222831;
+  /* background-color: #222831;
+  background-color: #000000; */
+  background-image: linear-gradient(315deg, #55efc4 0%, #000000 84%);
 }
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
@@ -22,7 +24,7 @@ body {
   background: #ff0000;
 }
 .App {
-  background-color: #222831;
+  background-image: linear-gradient(315deg, #55efc4 0%, #000000 84%);
   width: 100%;
   height: 100%;
   display: flex;
@@ -34,7 +36,6 @@ body {
 .Alive {
 }
 .unknown {
-
 }
 .header {
   margin-top: 20px;
@@ -42,20 +43,18 @@ body {
   font-size: 64px;
   font-weight: bold;
   font-family: "GetSwifty";
-  color:  #35C9DD;
-  text-shadow: 4px 0 0 yellow, -4px 0 0 yellow, 0 4px 0 yellow,
-    0 -4px 0 yellow, 2px 2px yellow, -2px -2px 0 yellow,
-    2px -2px 0 yellow, -2px 2px 0 yellow;
+  color: #35c9dd;
+  text-shadow: 4px 0 0 yellow, -4px 0 0 yellow, 0 4px 0 yellow, 0 -4px 0 yellow,
+    2px 2px yellow, -2px -2px 0 yellow, 2px -2px 0 yellow, -2px 2px 0 yellow;
 }
-.footer{
-    margin: 5px auto 20px auto;
-    font-size: 1.5em;
-    display: flex;
-    width: 100%;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-    color: #DDDDDD;
-    align-items: center;
-    justify-content: center;
+.footer {
+  margin: 5px auto 20px auto;
+  font-size: 1.5em;
+  display: flex;
+  width: 100%;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: #dddddd;
+  align-items: center;
+  justify-content: center;
 }
-

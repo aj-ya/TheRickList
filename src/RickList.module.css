@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=League+Spartan:wght@300;400;500&family=Roboto:ital,wght@0,400;1,500;1,700&family=Syne+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=League+Spartan:wght@300;400;500&family=Roboto:ital,wght@0,400;1,500;1,700&family=Syne+Mono&display=swap");
 .loading {
   animation: rotate 5s infinite linear;
 }
@@ -10,47 +10,48 @@
     transform: rotate(359deg);
   }
 }
-.RickCard{
-    display: inline-flex;
-    flex-direction: column;
-    margin: 10px;
-    background-color: #F05454;
-    width: 350px;
-    border-radius: 7%;
+.RickCard {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+  width: 350px;
+  border-radius: 7%;
 }
-.imageStyle{
-    width: 300px;
-    padding: 3px;
-    align-self: center;
+.imageStyle {
+  width: 300px;
+  padding: 3px;
+  align-self: center;
 }
-.nameStyle{
-    color:#30475E;
-    font-family: 'Roboto', sans-serif;
-    font-size: larger;
-    font-weight: bold;
-    text-align: center;
-    margin: 5px 10px;
+.nameStyle {
+  color: #30475e;
+  font-family: "Roboto", sans-serif;
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px 10px;
 }
-.status{
-    text-align: center;
-    margin: 5px 10px;
-    font-size: large;
-    font-weight: bold;
-    text-transform: capitalize;
+.status {
+  text-align: center;
+  margin: 5px 10px;
+  font-size: large;
+  font-weight: bold;
+  text-transform: capitalize;
 }
-.CardContainer{
-    min-height: 80vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+.CardContainer {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
-.fourNotfour{
-    font-size: 60px;
-    font-family: 'Roboto', sans-serif ;
-    color: #F05454;
-    text-align: center;
-    font-weight: bold;
-    align-self: center;
+.fourNotfour {
+  font-size: 60px;
+  font-family: "Roboto", sans-serif;
+  color: #f05454;
+  text-align: center;
+  font-weight: bold;
+  align-self: center;
 }
