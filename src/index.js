@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="TheRickList/">
       <Routes>
         <Route path="/:pagenum" element={<App />} />
         <Route path="/" element={<App />} />
